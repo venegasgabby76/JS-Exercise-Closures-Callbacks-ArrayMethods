@@ -205,9 +205,11 @@ function isItAnApple(strings) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
-}
+function removeApple(strings) {
+  const byeFruit = strings.filter(string => string !== 'apple');
+  return byeFruit;
+ }
+
 
 /**
  * ### Challenge `stringSmash`
@@ -224,9 +226,14 @@ function removeApple(/* code here */) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
-}
+
+function stringSmash(strings) {
+  const newString = strings.reduce((accumulator, currentItem) => {
+    return accumulator + currentItem;
+});
+return newString;
+};
+
 
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
@@ -238,13 +245,19 @@ function stringSmash(/* code here */) {
  * 
  * @instructions
  * Implement this function using forEach() or map().
- * 
+ *
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+
+function getFullNames(runners) {
+  const names = [];
+  runners.forEach(function(item){
+    names.push(`${item.last_name}, ${item.first_name}`);
+    return names;
+  })
+  return names;
 }
 
 /**
@@ -259,8 +272,11 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  const capsName = runners.map(name => {
+    return name.first_name.toUpperCase();
+  });
+  return capsName;
 }
 
 /**
