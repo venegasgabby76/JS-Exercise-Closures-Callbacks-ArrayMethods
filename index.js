@@ -279,6 +279,7 @@ function firstNamesAllCaps(runners) {
   return capsName;
 }
 
+
 /**
  * ### Challenge `getRunnersByTShirtSize`
  * * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
